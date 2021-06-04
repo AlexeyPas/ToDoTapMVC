@@ -3,27 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522A8A8B2668F32000F7323F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A8A2668F32000F7323F /* RegisterView.swift */; };
+		522A8A8E2668F33600F7323F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A8D2668F33600F7323F /* RegisterModel.swift */; };
+		522A8A912668F34500F7323F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A902668F34500F7323F /* RegisterController.swift */; };
+		522A8A9E266902BA00F7323F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A9D266902BA00F7323F /* Person.swift */; };
+		5233267E266A74EF00B8EC1D /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */; };
+		52332681266A750500B8EC1D /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52332680266A750500B8EC1D /* Tasks.swift */; };
+		527F4C56266AA7F0009C4A0B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C55266AA7F0009C4A0B /* RootViewController.swift */; };
+		527F4C5A266AA8B7009C4A0B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C59266AA8B7009C4A0B /* SplashViewController.swift */; };
+		528FADDA26692C7F000A8621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528FADD926692C7F000A8621 /* GoogleService-Info.plist */; };
+		52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC009E266920D8007C320E /* SceneDelegate.swift */; };
+		52BC00A4266923EF007C320E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC00A3266923EF007C320E /* MainView.swift */; };
 		52D63F472668E8B2001ED7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F462668E8B2001ED7D0 /* AppDelegate.swift */; };
-		52D63F492668E8B2001ED7D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F482668E8B2001ED7D0 /* SceneDelegate.swift */; };
-		52D63F4B2668E8B2001ED7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F4A2668E8B2001ED7D0 /* ViewController.swift */; };
-		52D63F4E2668E8B2001ED7D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D63F4C2668E8B2001ED7D0 /* Main.storyboard */; };
 		52D63F502668E8B6001ED7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D63F4F2668E8B6001ED7D0 /* Assets.xcassets */; };
 		52D63F532668E8B6001ED7D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D63F512668E8B6001ED7D0 /* LaunchScreen.storyboard */; };
+		52D63F782668EAEE001ED7D0 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F772668EAEE001ED7D0 /* LoginModel.swift */; };
+		52D63F7B2668EB64001ED7D0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F7A2668EB64001ED7D0 /* LoginView.swift */; };
+		52D63F7E2668EE15001ED7D0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F7D2668EE15001ED7D0 /* LoginController.swift */; };
+		EFFD8B796B6599510C7A96D9 /* Pods_ToDoTapMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A507F3DF1768511ECE8F91DE /* Pods_ToDoTapMVC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04605E1ACE28DBB8F7554267 /* Pods-ToDoTapMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoTapMVC.release.xcconfig"; path = "Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC.release.xcconfig"; sourceTree = "<group>"; };
+		522A8A8A2668F32000F7323F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		522A8A8D2668F33600F7323F /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		522A8A902668F34500F7323F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		522A8A9D266902BA00F7323F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		52332680266A750500B8EC1D /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		527F4C55266AA7F0009C4A0B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		527F4C59266AA8B7009C4A0B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		528FADD926692C7F000A8621 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52BC009E266920D8007C320E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52BC00A3266923EF007C320E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		52D63F432668E8B2001ED7D0 /* ToDoTapMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoTapMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D63F462668E8B2001ED7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52D63F482668E8B2001ED7D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52D63F4A2668E8B2001ED7D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52D63F4D2668E8B2001ED7D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52D63F4F2668E8B6001ED7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D63F522668E8B6001ED7D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52D63F542668E8B6001ED7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D63F772668EAEE001ED7D0 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		52D63F7A2668EB64001ED7D0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		52D63F7D2668EE15001ED7D0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A507F3DF1768511ECE8F91DE /* Pods_ToDoTapMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoTapMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7468F900B7A14CE6C195614 /* Pods-ToDoTapMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoTapMVC.debug.xcconfig"; path = "Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFFD8B796B6599510C7A96D9 /* Pods_ToDoTapMVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4B49B08321AD6E6934C090 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7468F900B7A14CE6C195614 /* Pods-ToDoTapMVC.debug.xcconfig */,
+				04605E1ACE28DBB8F7554267 /* Pods-ToDoTapMVC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		522A8AA0266902BF00F7323F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				522A8AA1266902C900F7323F /* Model */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		522A8AA1266902C900F7323F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				522A8A9D266902BA00F7323F /* Person.swift */,
+				52332680266A750500B8EC1D /* Tasks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		527F4C58266AA88F009C4A0B /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				527F4C55266AA7F0009C4A0B /* RootViewController.swift */,
+				527F4C59266AA8B7009C4A0B /* SplashViewController.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		52BC00A1266923CD007C320E /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				527F4C58266AA88F009C4A0B /* Book */,
+				52BC00A2266923DC007C320E /* Main */,
+				52D63F762668EA43001ED7D0 /* Register */,
+				52D63F752668EA36001ED7D0 /* Login */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		52BC00A2266923DC007C320E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				52BC00A3266923EF007C320E /* MainView.swift */,
+				5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		52D63F3A2668E8B2001ED7D0 = {
 			isa = PBXGroup;
 			children = (
 				52D63F452668E8B2001ED7D0 /* ToDoTapMVC */,
 				52D63F442668E8B2001ED7D0 /* Products */,
+				4F4B49B08321AD6E6934C090 /* Pods */,
+				588DD9C77584B89D06930152 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +140,44 @@
 		52D63F452668E8B2001ED7D0 /* ToDoTapMVC */ = {
 			isa = PBXGroup;
 			children = (
+				522A8AA0266902BF00F7323F /* Library */,
 				52D63F462668E8B2001ED7D0 /* AppDelegate.swift */,
-				52D63F482668E8B2001ED7D0 /* SceneDelegate.swift */,
-				52D63F4A2668E8B2001ED7D0 /* ViewController.swift */,
-				52D63F4C2668E8B2001ED7D0 /* Main.storyboard */,
+				52BC009E266920D8007C320E /* SceneDelegate.swift */,
+				52BC00A1266923CD007C320E /* MVC */,
 				52D63F4F2668E8B6001ED7D0 /* Assets.xcassets */,
 				52D63F512668E8B6001ED7D0 /* LaunchScreen.storyboard */,
 				52D63F542668E8B6001ED7D0 /* Info.plist */,
+				528FADD926692C7F000A8621 /* GoogleService-Info.plist */,
 			);
 			path = ToDoTapMVC;
+			sourceTree = "<group>";
+		};
+		52D63F752668EA36001ED7D0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				52D63F772668EAEE001ED7D0 /* LoginModel.swift */,
+				52D63F7A2668EB64001ED7D0 /* LoginView.swift */,
+				52D63F7D2668EE15001ED7D0 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		52D63F762668EA43001ED7D0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				522A8A8A2668F32000F7323F /* RegisterView.swift */,
+				522A8A8D2668F33600F7323F /* RegisterModel.swift */,
+				522A8A902668F34500F7323F /* RegisterController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		588DD9C77584B89D06930152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A507F3DF1768511ECE8F91DE /* Pods_ToDoTapMVC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D63F572668E8B6001ED7D0 /* Build configuration list for PBXNativeTarget "ToDoTapMVC" */;
 			buildPhases = (
+				EBBB13FA3DD3D20F85B2F181 /* [CP] Check Pods Manifest.lock */,
 				52D63F3F2668E8B2001ED7D0 /* Sources */,
 				52D63F402668E8B2001ED7D0 /* Frameworks */,
 				52D63F412668E8B2001ED7D0 /* Resources */,
+				1E78080B266838CC7920FF69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,35 +240,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D63F532668E8B6001ED7D0 /* LaunchScreen.storyboard in Resources */,
+				528FADDA26692C7F000A8621 /* GoogleService-Info.plist in Resources */,
 				52D63F502668E8B6001ED7D0 /* Assets.xcassets in Resources */,
-				52D63F4E2668E8B2001ED7D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E78080B266838CC7920FF69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBBB13FA3DD3D20F85B2F181 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoTapMVC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52D63F3F2668E8B2001ED7D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D63F4B2668E8B2001ED7D0 /* ViewController.swift in Sources */,
+				52D63F7E2668EE15001ED7D0 /* LoginController.swift in Sources */,
+				52D63F782668EAEE001ED7D0 /* LoginModel.swift in Sources */,
+				52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */,
+				52BC00A4266923EF007C320E /* MainView.swift in Sources */,
+				52332681266A750500B8EC1D /* Tasks.swift in Sources */,
+				522A8A8B2668F32000F7323F /* RegisterView.swift in Sources */,
+				522A8A8E2668F33600F7323F /* RegisterModel.swift in Sources */,
 				52D63F472668E8B2001ED7D0 /* AppDelegate.swift in Sources */,
-				52D63F492668E8B2001ED7D0 /* SceneDelegate.swift in Sources */,
+				527F4C5A266AA8B7009C4A0B /* SplashViewController.swift in Sources */,
+				52D63F7B2668EB64001ED7D0 /* LoginView.swift in Sources */,
+				527F4C56266AA7F0009C4A0B /* RootViewController.swift in Sources */,
+				522A8A9E266902BA00F7323F /* Person.swift in Sources */,
+				522A8A912668F34500F7323F /* RegisterController.swift in Sources */,
+				5233267E266A74EF00B8EC1D /* TasksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52D63F4C2668E8B2001ED7D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52D63F4D2668E8B2001ED7D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52D63F512668E8B6001ED7D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +443,7 @@
 		};
 		52D63F582668E8B6001ED7D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7468F900B7A14CE6C195614 /* Pods-ToDoTapMVC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +457,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myProdject.ToDoTapMVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		52D63F592668E8B6001ED7D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04605E1ACE28DBB8F7554267 /* Pods-ToDoTapMVC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myProdject.ToDoTapMVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

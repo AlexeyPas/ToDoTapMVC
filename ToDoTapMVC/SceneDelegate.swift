@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ToDoTapMVC
+//  WeatherApp
 //
-//  Created by Pasynkov Alexey on 03.06.2021.
+//  Created by MacBook Pro on 24.05.2021.
 //
 
 import UIKit
