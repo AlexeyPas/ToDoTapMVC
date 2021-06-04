@@ -30,12 +30,4 @@ struct Tasks {
 //    let checkMark: Bool
 }
 
-struct TasksForTomorrow {
-    let taskForThe: String
-    let systemImageName: String
-}
 
-struct TasksForWeek {
-    let taskForThe: String
-    let systemImageName: String
-}

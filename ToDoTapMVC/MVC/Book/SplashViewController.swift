@@ -31,7 +31,7 @@ class SplashViewController: UIViewController {
 //                AppDelegate.shared.rootViewController.switchToMainScreen()
 //            } else {
                 // navigate to login screen
-                AppDelegate.shared.rootViewController.switchToLogout()
+            AppDelegate.shared.rootViewController.switchToLogout()
 //            }
         }
     }

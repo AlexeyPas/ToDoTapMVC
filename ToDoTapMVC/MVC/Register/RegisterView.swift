@@ -57,6 +57,7 @@ class RegisterView: UIViewController {
         
         buttonLogin.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }
+    
     private func setupField() {
         usernameWindow.placeholder = "Username"
         usernameWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)

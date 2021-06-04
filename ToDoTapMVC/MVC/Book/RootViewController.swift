@@ -76,6 +76,27 @@ class RootViewController: UIViewController {
        animateDismissTransition(to: logoutScreen)
     }
     
+    func switchToTodayTable() {
+       let mainViewController = TodayTable()
+       let new = UINavigationController(rootViewController: mainViewController)
+        
+        animateFadeTransition(to: new)
+    }
+    
+    func switchToTomorrowTable() {
+       let mainViewController = TomorrowTable()
+       let new = UINavigationController(rootViewController: mainViewController)
+        
+        animateFadeTransition(to: new)
+    }
+    
+    func switchToWeekTable() {
+       let mainViewController = WeekTable()
+       let new = UINavigationController(rootViewController: mainViewController)
+        
+        animateFadeTransition(to: new)
+    }
+    
     private func animateDismissTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
        let initialFrame = CGRect(x: -view.bounds.width, y: 0, width: view.bounds.width, height: view.bounds.height)
        current.willMove(toParent: nil)

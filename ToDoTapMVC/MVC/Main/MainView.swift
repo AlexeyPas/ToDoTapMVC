@@ -127,116 +127,104 @@ import Firebase
 
 class MainView: UIViewController {
 
-    private let tableView = UITableView()
-
-    private let taskForToday =  [
-        Tasks(taskForThe: "Окучить", systemImageName: "checkmark.circle.fill"),
-        Tasks(taskForThe: "Подстричься", systemImageName: "checkmark.circle.fill"),
-        Tasks(taskForThe: "Укрыть", systemImageName: "checkmark.circle.fill"),
-    ]
-    private  let taskForTomorrow = [
-        Tasks(taskForThe: "купить курицу", systemImageName: "checkmark.circle.fill"),
-    ]
-    private let taskForWeek = [
-        Tasks(taskForThe: "Забрать подарок", systemImageName: "checkmark.circle.fill"),
-    ]
-
-
+    private let todayTableButton = UIButton()
+    private let stackViewForButton = UIStackView()
+    private let tomorrowTableButton = UIButton()
+    private let weekTableButton = UIButton()
+    private let backWindow = UIImageView(image: UIImage(named: "backWindow"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.didTapAddButton))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.didTapExitButton))
-        title = "ToDoTap"
-        tableView.dataSource = self
-        tableView.delegate = self
-
-        tableView.register(TasksTableViewCell.self, forCellReuseIdentifier: "TasksTableViewCell")
-        view.addSubview(tableView)
+        setup()
     }
-
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func setupButton() {
+     
+        todayTableButton.setTitle("Today", for: .normal)
+        todayTableButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+        todayTableButton.layer.cornerRadius = 12
+        todayTableButton.layer.masksToBounds = true
+        todayTableButton.setTitleColor(.black, for: .normal)
+        todayTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        
+        tomorrowTableButton.setTitle("Tommorow", for: .normal)
+        tomorrowTableButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+        tomorrowTableButton.layer.cornerRadius = 12
+        tomorrowTableButton.layer.masksToBounds = true
+        tomorrowTableButton.setTitleColor(.black, for: .normal)
+        tomorrowTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        
+        weekTableButton.setTitle("Week", for: .normal)
+        weekTableButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+        weekTableButton.layer.cornerRadius = 12
+        weekTableButton.layer.masksToBounds = true
+        weekTableButton.setTitleColor(.black, for: .normal)
+        weekTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        
+        todayTableButton.addTarget(self, action: #selector(didTapTodayTableButton), for: .touchUpInside)
+        
+        weekTableButton.addTarget(self, action: #selector(didTapTommorowTableButton), for: .touchUpInside)
+        
+        tomorrowTableButton.addTarget(self, action: #selector(didTapWeekTableButton), for: .touchUpInside)
+    }
+    
+    
+    private func setup() {
+        setupButton()
+        [backWindow, todayTableButton,tomorrowTableButton, weekTableButton].forEach { view.addSubview($0)}
+    }
+    
+    @objc
+    private func didTapTodayTableButton() {
+        AppDelegate.shared.rootViewController.switchToTodayTable()
+    }
+    
+    @objc
+    private func didTapTommorowTableButton() {
+        AppDelegate.shared.rootViewController.switchToTomorrowTable()
+    }
+    
+    @objc
+    private func didTapWeekTableButton() {
+        AppDelegate.shared.rootViewController.switchToWeekTable()
+    }
+    
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        
+        backWindow.pin.center()
+        
 
-        tableView.pin
-            .all()
+        tomorrowTableButton.pin
+            .center()
+            .height(48)
+            .width(90%)
+            .maxWidth(250)
+            
+        todayTableButton.pin
+            .above(of: tomorrowTableButton, aligned: .center)
+            .marginBottom(12)
+            .height(48)
+            .width(90%)
+            .maxWidth(250)
+
+        weekTableButton.pin
+            .below(of: tomorrowTableButton, aligned: .center)
+            .marginTop(12)
+            .height(48)
+            .width(90%)
+            .maxWidth(250)
+
     }
-
-//    @objc
-//    private func didTapAddButton() {
-//
-//        let taskForToday =  TasksForToday(taskForThe: "Окучить", systemImageName: "checkmark.circle.fill")
-//
-//        tasks.insert(taskForToday, at: 0)
-//
-//        tableView.beginUpdates()
-//        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
-//        tableView.endUpdates()
-//        tableView.reloadData()
-//    }
-
-    @objc
-    private func didTapExitButton() {
-        do {
-            try Auth.auth().signOut()
-            AppDelegate.shared.rootViewController.showLoginScreen()
-        } catch  {
-            print(error)
-        }
-    }
-}
-
-extension MainView: UITableViewDelegate, UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        3
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Сегодня"
-        } else if section == 1 {
-            return "Завтра"
-        } else {
-            return "потом"
-        }
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return taskForToday.count
-        } else  if section == 1 {
-            return taskForTomorrow.count
-        } else {
-            return taskForWeek.count
-        }
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TasksTableViewCell", for: indexPath) as? TasksTableViewCell else {
-            return .init()
-        }
-        for i in taskForToday {
-            cell.configure(with: i)
-        }
-
-
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let task = tasks[indexPath.row]
-//        let viewController = UIViewController()
-//        viewController.title = task.title
-//        viewController.view.backgroundColor = .systemBackground
-//
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//
-//        present(navigationController, animated: true, completion: nil)
-    }
+    
 }
 
