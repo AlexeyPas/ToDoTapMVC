@@ -166,6 +166,7 @@ class MainView: UIViewController {
         tomorrowTableButton.setTitleColor(.black, for: .normal)
         tomorrowTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         
+        
         weekTableButton.setTitle("Week", for: .normal)
         weekTableButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
         weekTableButton.layer.cornerRadius = 12

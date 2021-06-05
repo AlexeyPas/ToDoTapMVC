@@ -31,7 +31,9 @@ class AddTaskViewController: UIViewController {
     }
     
     private func setupButton() {
-        
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let paddingView2: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+
         backWindow.pin.center()
         
         addTaskButton.setTitle("Add new task", for: .normal)
@@ -41,15 +43,20 @@ class AddTaskViewController: UIViewController {
         addTaskButton.setTitleColor(.black, for: .normal)
         addTaskButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         
+        
         dayForTask.placeholder = "Choose which day (Today,Tomorrow,Week)"
         dayForTask.backgroundColor = UIColor(white: 1, alpha: 0.7)
         dayForTask.layer.cornerRadius = 20
         dayForTask.layer.masksToBounds = true
+        dayForTask.leftView = paddingView
+        dayForTask.leftViewMode = .always
         
         task.placeholder = "Write a new task"
         task.backgroundColor = UIColor(white: 1, alpha: 0.7)
         task.layer.cornerRadius = 20
         task.layer.masksToBounds = true
+        task.leftView = paddingView2
+        task.leftViewMode = .always
         
         
         addTaskButton.addTarget(self, action: #selector(didTapAddTaskButton), for: .touchUpInside)

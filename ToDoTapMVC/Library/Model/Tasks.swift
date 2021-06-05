@@ -39,3 +39,14 @@ var emailClient = String()
                                          taskForDay(titel: "Дописать", isCompleted: false),
                                          taskForDay(titel: "Убрать", isCompleted: false)
 ]
+
+var tasksForTomorrow: [taskForDay] =  [   taskForDay(titel: "позвонить", isCompleted: false),
+                                        taskForDay(titel: "Дописать", isCompleted: false),
+                                        taskForDay(titel: "Убрать", isCompleted: false)
+]
+
+var tasksForWeek: [taskForDay] =  [   taskForDay(titel: "позвонить", isCompleted: false),
+                                        taskForDay(titel: "Дописать", isCompleted: false),
+                                        taskForDay(titel: "Убрать", isCompleted: false)
+]
+

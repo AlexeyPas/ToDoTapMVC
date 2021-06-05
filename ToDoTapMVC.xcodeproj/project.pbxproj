@@ -17,11 +17,11 @@
 		527F4C56266AA7F0009C4A0B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C55266AA7F0009C4A0B /* RootViewController.swift */; };
 		527F4C5A266AA8B7009C4A0B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C59266AA8B7009C4A0B /* SplashViewController.swift */; };
 		527F4C66266ADE70009C4A0B /* TodayTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C65266ADE70009C4A0B /* TodayTable.swift */; };
-		527F4C69266ADE92009C4A0B /* TomorrowTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C68266ADE92009C4A0B /* TomorrowTable.swift */; };
 		527F4C71266AE0EB009C4A0B /* WeekTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C70266AE0EB009C4A0B /* WeekTable.swift */; };
 		528FADDA26692C7F000A8621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528FADD926692C7F000A8621 /* GoogleService-Info.plist */; };
 		52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC009E266920D8007C320E /* SceneDelegate.swift */; };
 		52BC00A4266923EF007C320E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC00A3266923EF007C320E /* MainView.swift */; };
+		52D4EA32266B9E7F0009013E /* TomorrowTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4EA31266B9E7F0009013E /* TomorrowTable.swift */; };
 		52D63F472668E8B2001ED7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F462668E8B2001ED7D0 /* AppDelegate.swift */; };
 		52D63F502668E8B6001ED7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D63F4F2668E8B6001ED7D0 /* Assets.xcassets */; };
 		52D63F532668E8B6001ED7D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D63F512668E8B6001ED7D0 /* LaunchScreen.storyboard */; };
@@ -43,11 +43,11 @@
 		527F4C55266AA7F0009C4A0B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		527F4C59266AA8B7009C4A0B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		527F4C65266ADE70009C4A0B /* TodayTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTable.swift; sourceTree = "<group>"; };
-		527F4C68266ADE92009C4A0B /* TomorrowTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTable.swift; sourceTree = "<group>"; };
 		527F4C70266AE0EB009C4A0B /* WeekTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTable.swift; sourceTree = "<group>"; };
 		528FADD926692C7F000A8621 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52BC009E266920D8007C320E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52BC00A3266923EF007C320E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		52D4EA31266B9E7F0009013E /* TomorrowTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomorrowTable.swift; sourceTree = "<group>"; };
 		52D63F432668E8B2001ED7D0 /* ToDoTapMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoTapMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D63F462668E8B2001ED7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D63F4F2668E8B6001ED7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,14 +79,6 @@
 				04605E1ACE28DBB8F7554267 /* Pods-ToDoTapMVC.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		520125E7266B0B3200863CCF /* Tomorrow */ = {
-			isa = PBXGroup;
-			children = (
-				527F4C68266ADE92009C4A0B /* TomorrowTable.swift */,
-			);
-			path = Tomorrow;
 			sourceTree = "<group>";
 		};
 		520125EE266B115C00863CCF /* Add */ = {
@@ -143,9 +135,9 @@
 		52BC00A1266923CD007C320E /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				52D4EA30266B9E7F0009013E /* Tomorrow */,
 				5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */,
 				520125EE266B115C00863CCF /* Add */,
-				520125E7266B0B3200863CCF /* Tomorrow */,
 				52B64F45266AF3290020223A /* Todau */,
 				527F4C6F266AE0D1009C4A0B /* Week */,
 				527F4C58266AA88F009C4A0B /* Book */,
@@ -162,6 +154,14 @@
 				52BC00A3266923EF007C320E /* MainView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		52D4EA30266B9E7F0009013E /* Tomorrow */ = {
+			isa = PBXGroup;
+			children = (
+				52D4EA31266B9E7F0009013E /* TomorrowTable.swift */,
+			);
+			path = Tomorrow;
 			sourceTree = "<group>";
 		};
 		52D63F3A2668E8B2001ED7D0 = {
@@ -343,6 +343,7 @@
 				52D63F782668EAEE001ED7D0 /* LoginModel.swift in Sources */,
 				52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */,
 				520125E4266AFCC000863CCF /* TodayViewCell.swift in Sources */,
+				52D4EA32266B9E7F0009013E /* TomorrowTable.swift in Sources */,
 				52BC00A4266923EF007C320E /* MainView.swift in Sources */,
 				52332681266A750500B8EC1D /* Tasks.swift in Sources */,
 				522A8A8B2668F32000F7323F /* RegisterView.swift in Sources */,
@@ -352,7 +353,6 @@
 				527F4C5A266AA8B7009C4A0B /* SplashViewController.swift in Sources */,
 				520125F2266B119600863CCF /* AddTaskViewController.swift in Sources */,
 				52D63F7B2668EB64001ED7D0 /* LoginView.swift in Sources */,
-				527F4C69266ADE92009C4A0B /* TomorrowTable.swift in Sources */,
 				527F4C56266AA7F0009C4A0B /* RootViewController.swift in Sources */,
 				522A8A9E266902BA00F7323F /* Person.swift in Sources */,
 				5233267E266A74EF00B8EC1D /* TasksTableViewCell.swift in Sources */,

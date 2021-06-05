@@ -59,20 +59,31 @@ class RegisterView: UIViewController {
     }
     
     private func setupField() {
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let paddingView2: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let paddingView3: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+
+        
         usernameWindow.placeholder = "Username"
         usernameWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)
         usernameWindow.layer.cornerRadius = 20
         usernameWindow.layer.masksToBounds = true
+        usernameWindow.leftView = paddingView
+        usernameWindow.leftViewMode = .always
         
         passwordWindow.placeholder = "Password"
         passwordWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)
         passwordWindow.layer.cornerRadius = 20
         passwordWindow.layer.masksToBounds = true
+        passwordWindow.leftView = paddingView2
+        passwordWindow.leftViewMode = .always
         
         emailWindow.placeholder = "Email"
         emailWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)
         emailWindow.layer.cornerRadius = 20
         emailWindow.layer.masksToBounds = true
+        emailWindow.leftView = paddingView3
+        emailWindow.leftViewMode = .always
     }
     
     private func setup() {

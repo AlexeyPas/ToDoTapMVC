@@ -40,7 +40,8 @@ class LoginView: UIViewController {
     }
     
     private func setup() {
-        
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let paddingView2: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
 
         actionButton.layer.cornerRadius = 20
         actionButton.layer.masksToBounds = true
@@ -66,12 +67,16 @@ class LoginView: UIViewController {
         emailWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)
         emailWindow.layer.cornerRadius = 20
         emailWindow.layer.masksToBounds = true
+        emailWindow.leftView = paddingView2
+        emailWindow.leftViewMode = .always
         
         passwordWindow.placeholder = "Password"
         passwordWindow.backgroundColor = UIColor(white: 1, alpha: 0.7)
         passwordWindow.layer.cornerRadius = 20
         passwordWindow.layer.masksToBounds = true
-        
+        passwordWindow.leftView = paddingView
+        passwordWindow.leftViewMode = .always
+//
         buttonRegister.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         
         actionButton.addTarget(self, action: #selector(didTapActionButton), for: .touchUpInside)
