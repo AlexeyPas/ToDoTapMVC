@@ -24,10 +24,18 @@
 
 import Foundation
 
-struct Tasks {
-    let taskForThe: String
-    let systemImageName: String
-//    let checkMark: Bool
+struct taskForDay {
+    let titel: String
+    var isCompleted: Bool = false
 }
 
+var newTask: String? = nil
+var haveNewData: Bool = false
+var uid = String()
+var nameClient = String()
+var emailClient = String()
 
+ var tasksForToday: [taskForDay] =  [   taskForDay(titel: "позвонить", isCompleted: false),
+                                         taskForDay(titel: "Дописать", isCompleted: false),
+                                         taskForDay(titel: "Убрать", isCompleted: false)
+]

@@ -13,8 +13,9 @@ class  PersonInfo{
     var password: String
     
     init(_ fio:String, _ email:String, _ password: String){
-        self.fio=fio
+        self.fio = fio
         self.email = email
         self.password = password
     }
 }
+

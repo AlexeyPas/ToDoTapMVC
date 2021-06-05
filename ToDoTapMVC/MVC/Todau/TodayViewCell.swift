@@ -1,14 +1,13 @@
 //
-//  TasksTableViewCell.swift
+//  TodayViewCell.swift
 //  ToDoTapMVC
 //
-//  Created by Pasynkov Alexey on 04.06.2021.
+//  Created by Pasynkov Alexey on 05.06.2021.
 //
 
 import UIKit
-import PinLayout
 
-class TasksTableViewCell : UITableViewCell {
+class TodayViewCell: UITableViewCell {
     
     private let taskForThe = UILabel()
     private let iconImageView = UIImageView()
@@ -50,7 +49,7 @@ class TasksTableViewCell : UITableViewCell {
         
     }
     
-    func configure(with model: Tasks) {
+    func configure(with model: taskForDay) {
         
        // let coutnOfTasks = model.taskForThe.count
 //        for i in model {
@@ -58,8 +57,8 @@ class TasksTableViewCell : UITableViewCell {
 //            iconImageView.image = UIImage(systemName: i.systemImageName)
 //        }
         
-        taskForThe.text = model.taskForThe
-        iconImageView.image = UIImage(systemName: model.systemImageName)
+        taskForThe.text = model.titel
+//        iconImageView.image = UIImage(systemName: model.systemImageName)
         
     }
 }

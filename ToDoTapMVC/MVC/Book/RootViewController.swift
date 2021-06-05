@@ -97,6 +97,13 @@ class RootViewController: UIViewController {
         animateFadeTransition(to: new)
     }
     
+    func switchToAddTaskScreen() {
+       let mainViewController = AddTaskViewController()
+       let new = UINavigationController(rootViewController: mainViewController)
+        
+        animateFadeTransition(to: new)
+    }
+    
     private func animateDismissTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
        let initialFrame = CGRect(x: -view.bounds.width, y: 0, width: view.bounds.width, height: view.bounds.height)
        current.willMove(toParent: nil)

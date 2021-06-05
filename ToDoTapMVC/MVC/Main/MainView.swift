@@ -124,6 +124,8 @@ import UIKit
 import Foundation
 import PinLayout
 import Firebase
+import FirebaseDatabase
+
 
 class MainView: UIViewController {
 
@@ -132,9 +134,11 @@ class MainView: UIViewController {
     private let tomorrowTableButton = UIButton()
     private let weekTableButton = UIButton()
     private let backWindow = UIImageView(image: UIImage(named: "backWindow"))
+    private let buttinExit = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         setup()
     }
     
@@ -145,6 +149,8 @@ class MainView: UIViewController {
     }
     
     private func setupButton() {
+        
+        
      
         todayTableButton.setTitle("Today", for: .normal)
         todayTableButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
@@ -167,17 +173,24 @@ class MainView: UIViewController {
         weekTableButton.setTitleColor(.black, for: .normal)
         weekTableButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         
+        buttinExit.setTitle("Exit", for: .normal)
+        buttinExit.setTitleColor(.black, for: .normal)
+        buttinExit.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        buttinExit.alpha = 0.3
+        
         todayTableButton.addTarget(self, action: #selector(didTapTodayTableButton), for: .touchUpInside)
         
-        weekTableButton.addTarget(self, action: #selector(didTapTommorowTableButton), for: .touchUpInside)
+        tomorrowTableButton.addTarget(self, action: #selector(didTapTommorowTableButton), for: .touchUpInside)
         
-        tomorrowTableButton.addTarget(self, action: #selector(didTapWeekTableButton), for: .touchUpInside)
+        weekTableButton.addTarget(self, action: #selector(didTapWeekTableButton), for: .touchUpInside)
+        
+        buttinExit.addTarget(self, action: #selector(didTapExitButton), for: .touchUpInside)
     }
     
     
     private func setup() {
         setupButton()
-        [backWindow, todayTableButton,tomorrowTableButton, weekTableButton].forEach { view.addSubview($0)}
+        [backWindow, buttinExit, todayTableButton,tomorrowTableButton, weekTableButton].forEach { view.addSubview($0)}
     }
     
     @objc
@@ -193,6 +206,16 @@ class MainView: UIViewController {
     @objc
     private func didTapWeekTableButton() {
         AppDelegate.shared.rootViewController.switchToWeekTable()
+    }
+    
+    @objc
+    private func didTapExitButton() {
+        do {
+            try Auth.auth().signOut()
+        } catch  {
+            print(error)
+        }
+        AppDelegate.shared.rootViewController.switchToLogout()
     }
     
     
@@ -224,6 +247,10 @@ class MainView: UIViewController {
             .width(90%)
             .maxWidth(250)
 
+        buttinExit.pin
+            .bottomLeft(24)
+            .height(48)
+            .width(120)
     }
     
 }

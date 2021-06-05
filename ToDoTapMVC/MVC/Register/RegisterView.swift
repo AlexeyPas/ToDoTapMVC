@@ -24,6 +24,7 @@ class RegisterView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         setup()
     }
     
@@ -40,9 +41,8 @@ class RegisterView: UIViewController {
     }
     
     private func setupButton() {
-        actionButton.layer.cornerRadius = 32
+        actionButton.layer.cornerRadius = 20
         actionButton.layer.masksToBounds = true
-        actionButton.layer.opacity = 20
         actionButton.backgroundColor = UIColor.blue
         actionButton.setTitle("->", for: .normal)
         
@@ -80,8 +80,11 @@ class RegisterView: UIViewController {
         setupField()
         setupButton()
         
-        [backWindow, conteinerView, textHidan, actionButton, usernameWindow, passwordWindow, emailWindow, buttonLogin, ].forEach { view.addSubview($0)}
+        [textHidan, usernameWindow, emailWindow, passwordWindow, actionButton].forEach{conteinerView.addSubview($0)}
+        [backWindow, conteinerView, buttonLogin].forEach { view.addSubview($0)}
     }
+    
+    
     
     @objc
     private func didTapActionButton() {
@@ -101,7 +104,14 @@ class RegisterView: UIViewController {
                         var user = [[String: Any]]()
                         
                         
-                        let uid = result.user.uid
+                        uid = result.user.uid
+                        nameClient = name
+                        emailClient = email
+                        let row: Int = 0
+                        let line = 0
+                        var test = [[Int]]()
+//                        test[row][line] = ["test", false]
+                        
                         let docRef = db.collection("users").document(uid)
                         docRef.getDocument { (document, error) in
                             //  DispatchQueue.global(qos: .utility).async {
@@ -110,10 +120,13 @@ class RegisterView: UIViewController {
                             } else {
                                 print("Document does not exist")
                             }
-                            db.collection("reserves").document(uid).setData([
+                            db.collection("users").document(uid).setData([
                                 "name": name,
                                 "email": email,
-                                "uid": uid
+                                "uid": uid,
+                                "row" : ["test", false],
+                                "Today": [row],
+                                
                             ]) { err in
                                 if let err = err {
                                     print("Error writing document: \(err)")
@@ -144,46 +157,56 @@ class RegisterView: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        actionButton.pin
-            .centerRight(24)
-            .height(64)
-            .width(64)
         
-        backWindow.pin.center()
+        
+        backWindow.pin
+            .center()
+        
+        conteinerView.pin
+            .horizontally(24)
         
         textHidan.pin
-            .vertically(view.pin.safeArea.top + 200)
-            .hCenter()
+            .top()
             .sizeToFit()
+            .hCenter()
         
         usernameWindow.pin
-            .topLeft()
-            .marginLeft(12)
-            .marginTop(300)
+            .below(of: textHidan, aligned: .center)
+            .marginTop(36)
             .height(48)
-            .width(250)
+            .width(90%)
+            .maxWidth(250)
         
-        passwordWindow.pin
+        emailWindow.pin
             .below(of: usernameWindow, aligned: .center)
             .marginTop(12)
             .height(48)
-            .width(250)
+            .width(90%)
+            .maxWidth(250)
+
+        passwordWindow.pin
+            .below(of: emailWindow, aligned: .center)
+            .marginTop(12)
+            .height(48)
+            .width(90%)
+            .maxWidth(250)
         
-        emailWindow.pin
+        actionButton.pin
             .below(of: passwordWindow, aligned: .center)
             .marginTop(12)
             .height(48)
-            .width(250)
+            .width(90%)
+            .maxWidth(250)
         
         buttonLogin.pin
             .topRight()
-            .marginTop(90)
+            .marginTop(100)
             .marginRight(12)
             .height(48)
             .width(120)
         
         conteinerView.pin
-            .wrapContent()
+            .wrapContent(.vertically)
             .center()
     }
     

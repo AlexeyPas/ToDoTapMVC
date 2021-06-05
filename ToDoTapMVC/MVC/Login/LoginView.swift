@@ -20,10 +20,11 @@ class LoginView: UIViewController {
     private let passwordWindow = UITextField()
     private let buttonRegister = UIButton()
     private let buttinForgot = UIButton()
+    private let blur = UIVisualEffect()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         setup()
     }
 
@@ -39,6 +40,8 @@ class LoginView: UIViewController {
     }
     
     private func setup() {
+        
+
         actionButton.layer.cornerRadius = 20
         actionButton.layer.masksToBounds = true
         actionButton.backgroundColor = UIColor.blue
@@ -86,7 +89,11 @@ class LoginView: UIViewController {
         if (!email.isEmpty && !password.isEmpty) {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if error == nil {
-                    AppDelegate.shared.rootViewController.switchToMainScreen()
+                    if let result = result {
+                        uid = result.user.uid
+                        
+                        AppDelegate.shared.rootViewController.switchToMainScreen()
+                    }
                 }
             }
         } else  if (email.isEmpty && password.isEmpty)  {
@@ -103,11 +110,14 @@ class LoginView: UIViewController {
         
     }
     
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         backWindow.pin
             .center()
+        
         
         conteinerView.pin
             .horizontally(24)
@@ -116,6 +126,7 @@ class LoginView: UIViewController {
             .top()
             .sizeToFit()
             .hCenter()
+        
        
         emailWindow.pin
             .below(of: textHidan, aligned: .center)
@@ -138,9 +149,10 @@ class LoginView: UIViewController {
             .width(90%)
             .maxWidth(250)
         
-        
         buttonRegister.pin
-            .topRight(view.pin.safeArea.top)
+            .topRight()
+            .marginTop(100)
+            .marginRight(12)
             .height(48)
             .width(120)
         

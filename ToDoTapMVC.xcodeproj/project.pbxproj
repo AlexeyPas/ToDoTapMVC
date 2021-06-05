@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520125E4266AFCC000863CCF /* TodayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520125E3266AFCC000863CCF /* TodayViewCell.swift */; };
+		520125F2266B119600863CCF /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520125F1266B119600863CCF /* AddTaskViewController.swift */; };
 		522A8A8B2668F32000F7323F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A8A2668F32000F7323F /* RegisterView.swift */; };
 		522A8A8E2668F33600F7323F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A8D2668F33600F7323F /* RegisterModel.swift */; };
-		522A8A912668F34500F7323F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A902668F34500F7323F /* RegisterController.swift */; };
 		522A8A9E266902BA00F7323F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A8A9D266902BA00F7323F /* Person.swift */; };
 		5233267E266A74EF00B8EC1D /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */; };
 		52332681266A750500B8EC1D /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52332680266A750500B8EC1D /* Tasks.swift */; };
@@ -19,7 +20,6 @@
 		527F4C69266ADE92009C4A0B /* TomorrowTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C68266ADE92009C4A0B /* TomorrowTable.swift */; };
 		527F4C71266AE0EB009C4A0B /* WeekTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F4C70266AE0EB009C4A0B /* WeekTable.swift */; };
 		528FADDA26692C7F000A8621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528FADD926692C7F000A8621 /* GoogleService-Info.plist */; };
-		52B64F47266AF3470020223A /* TodayModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B64F46266AF3470020223A /* TodayModal.swift */; };
 		52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC009E266920D8007C320E /* SceneDelegate.swift */; };
 		52BC00A4266923EF007C320E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC00A3266923EF007C320E /* MainView.swift */; };
 		52D63F472668E8B2001ED7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D63F462668E8B2001ED7D0 /* AppDelegate.swift */; };
@@ -33,9 +33,10 @@
 
 /* Begin PBXFileReference section */
 		04605E1ACE28DBB8F7554267 /* Pods-ToDoTapMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoTapMVC.release.xcconfig"; path = "Target Support Files/Pods-ToDoTapMVC/Pods-ToDoTapMVC.release.xcconfig"; sourceTree = "<group>"; };
+		520125E3266AFCC000863CCF /* TodayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewCell.swift; sourceTree = "<group>"; };
+		520125F1266B119600863CCF /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		522A8A8A2668F32000F7323F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		522A8A8D2668F33600F7323F /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
-		522A8A902668F34500F7323F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		522A8A9D266902BA00F7323F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		52332680266A750500B8EC1D /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		527F4C68266ADE92009C4A0B /* TomorrowTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTable.swift; sourceTree = "<group>"; };
 		527F4C70266AE0EB009C4A0B /* WeekTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTable.swift; sourceTree = "<group>"; };
 		528FADD926692C7F000A8621 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		52B64F46266AF3470020223A /* TodayModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModal.swift; sourceTree = "<group>"; };
 		52BC009E266920D8007C320E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52BC00A3266923EF007C320E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		52D63F432668E8B2001ED7D0 /* ToDoTapMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoTapMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +81,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		520125E7266B0B3200863CCF /* Tomorrow */ = {
+			isa = PBXGroup;
+			children = (
+				527F4C68266ADE92009C4A0B /* TomorrowTable.swift */,
+			);
+			path = Tomorrow;
+			sourceTree = "<group>";
+		};
+		520125EE266B115C00863CCF /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				520125F1266B119600863CCF /* AddTaskViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		522A8AA0266902BF00F7323F /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,21 +123,19 @@
 			path = Book;
 			sourceTree = "<group>";
 		};
-		527F4C6F266AE0D1009C4A0B /* Table */ = {
+		527F4C6F266AE0D1009C4A0B /* Week */ = {
 			isa = PBXGroup;
 			children = (
-				5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */,
-				527F4C68266ADE92009C4A0B /* TomorrowTable.swift */,
 				527F4C70266AE0EB009C4A0B /* WeekTable.swift */,
 			);
-			path = Table;
+			path = Week;
 			sourceTree = "<group>";
 		};
 		52B64F45266AF3290020223A /* Todau */ = {
 			isa = PBXGroup;
 			children = (
 				527F4C65266ADE70009C4A0B /* TodayTable.swift */,
-				52B64F46266AF3470020223A /* TodayModal.swift */,
+				520125E3266AFCC000863CCF /* TodayViewCell.swift */,
 			);
 			path = Todau;
 			sourceTree = "<group>";
@@ -129,12 +143,15 @@
 		52BC00A1266923CD007C320E /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				5233267D266A74EF00B8EC1D /* TasksTableViewCell.swift */,
+				520125EE266B115C00863CCF /* Add */,
+				520125E7266B0B3200863CCF /* Tomorrow */,
 				52B64F45266AF3290020223A /* Todau */,
+				527F4C6F266AE0D1009C4A0B /* Week */,
 				527F4C58266AA88F009C4A0B /* Book */,
 				52BC00A2266923DC007C320E /* Main */,
 				52D63F762668EA43001ED7D0 /* Register */,
 				52D63F752668EA36001ED7D0 /* Login */,
-				527F4C6F266AE0D1009C4A0B /* Table */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -195,7 +212,6 @@
 			children = (
 				522A8A8A2668F32000F7323F /* RegisterView.swift */,
 				522A8A8D2668F33600F7323F /* RegisterModel.swift */,
-				522A8A902668F34500F7323F /* RegisterController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -326,19 +342,19 @@
 				52D63F7E2668EE15001ED7D0 /* LoginController.swift in Sources */,
 				52D63F782668EAEE001ED7D0 /* LoginModel.swift in Sources */,
 				52BC009F266920D8007C320E /* SceneDelegate.swift in Sources */,
+				520125E4266AFCC000863CCF /* TodayViewCell.swift in Sources */,
 				52BC00A4266923EF007C320E /* MainView.swift in Sources */,
 				52332681266A750500B8EC1D /* Tasks.swift in Sources */,
 				522A8A8B2668F32000F7323F /* RegisterView.swift in Sources */,
 				522A8A8E2668F33600F7323F /* RegisterModel.swift in Sources */,
 				527F4C71266AE0EB009C4A0B /* WeekTable.swift in Sources */,
-				52B64F47266AF3470020223A /* TodayModal.swift in Sources */,
 				52D63F472668E8B2001ED7D0 /* AppDelegate.swift in Sources */,
 				527F4C5A266AA8B7009C4A0B /* SplashViewController.swift in Sources */,
+				520125F2266B119600863CCF /* AddTaskViewController.swift in Sources */,
 				52D63F7B2668EB64001ED7D0 /* LoginView.swift in Sources */,
 				527F4C69266ADE92009C4A0B /* TomorrowTable.swift in Sources */,
 				527F4C56266AA7F0009C4A0B /* RootViewController.swift in Sources */,
 				522A8A9E266902BA00F7323F /* Person.swift in Sources */,
-				522A8A912668F34500F7323F /* RegisterController.swift in Sources */,
 				5233267E266A74EF00B8EC1D /* TasksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8F8X83QKT;
 				INFOPLIST_FILE = ToDoTapMVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8F8X83QKT;
 				INFOPLIST_FILE = ToDoTapMVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
